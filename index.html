@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<p>UPDATED: 24/02/2026</p>
 <html>
 <head>
-  <title>ShadowStrike CS:GO</title>
+  <title>PICKLE'S SERVER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -64,7 +63,7 @@
 </head>
 <body>
 
-<h1>🔥 ShadowStrike CS:GO 🔥</h1>
+<h1>PICKLE'S SERVER</h1>
 
 <div class="box">
   <h2>Server Status</h2>
@@ -73,9 +72,11 @@
 
 <div class="box">
   <h2>Join Us</h2>
-  <a class="button" href="steam://connect/168.100.161.99:2462">
-    JOIN SERVER
-  </a>
+<a class="button" onclick="copyIP()">
+    COPY CONNECT COMMAND
+</a>
+
+<p id="copied" style="display:none; color:#00ff88;">Copied to clipboard!</p>
 </div>
 
 <div class="box">
@@ -106,6 +107,13 @@ fetch("https://api.mcsrvstat.us/2/YOUR_IP:PORT")
   }
 });
 </script>
-
+<script>
+function copyIP() {
+    const text = "connect 168.100.161.99:2462";
+    navigator.clipboard.writeText(text).then(function() {
+        document.getElementById("copied").style.display = "block";
+    });
+}
+</script>
 </body>
 </html>
